@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/Reshufowzi/java-webapps-jenkins.git'
-            }
-        }
-
         stage('Build with Maven (Docker)') {
             steps {
                 sh '''
@@ -44,4 +37,5 @@ pipeline {
         }
     }
 }
+
 
